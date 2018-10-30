@@ -21,6 +21,7 @@
 void main(void) {
     //TRISB = 0xFE;
     TRISBbits.RB0 = 0;
+    TRISEbits.RE0 = 1; /*con esta linea se asegura al pin E0 como entrada digital*/
     ADCON1 = 0xFF;
     while(1){
         if (PORTEbits.RE0 == 1){
